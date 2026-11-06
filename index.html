@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тупые идеи для сайтов</title>
+    <meta name="description" content="Я придумываю тупые идеи для сайтов, если у вас кончились идеи что делать на уроке. Нажми на кнопку и получи свою идею!">
+    <meta name="author" content="Profi Labs">
+    <link rel="icon" type="image/svg+xml" href="/icon.svg">
+    <link rel="apple-touch-icon" href="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Тупые идеи для сайтов">
+    <meta property="og:description" content="Кончились идеи для урока? Нажми на кнопку и получи абсурдную идею для сайта!">
+    <meta property="og:image" content="/preview.jpg"> 
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+    <section>
+        <h1 class="logo">Рандомные сайты</h1>
+        <p class="text">Привет! Меня зовут Имя Фамилия. Я придумываю тупые идеи для сайтов, если у вас кончились идеи что делать на уроке.</p>
+    </section>
+
+    <section>
+        <div style="height: 20px;"></div>
+        <h2>Нажми на кнопку, чтобы прокрутить идеи</h2>
+    </section>
+
+    <section class="slot-machine">
+        <div class="garland" id="garland">
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+            <div class="bulb"></div>
+        </div>
+
+        <div class="container">
+            <div class="kazik">
+                <p class="text">Для кого</p>
+                <div class="section">
+                    <div class="idea">
+                        <p class="text" id="drum-1">Идея 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kazik">
+                <p class="text">О чём</p>
+                <div class="section">
+                    <div class="idea">
+                        <p class="text" id="drum-2">Идея 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kazik">
+                <p class="text">Особенность</p>
+                <div class="section">
+                    <div class="idea">
+                        <p class="text" id="drum-3">Идея 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 40px;"></div>
+
+        <button id="kazik">ДАЙ МНЕ ИДЕЮ!!!</button>
+        <audio id="sound" src="casino.mp3"></audio>
+    </section>
+
+    <img class="table" src="table.png" alt="table">
+
+    </main>
+
+    <script>
+        // ваш звук — подключите здесь, например:
+        // const sound = new Audio("click.mp3");
+        // и вызывайте sound.play() там, где нужно
+
+        const words1 = [
+            "Программисты", "Преступники", "Секретные агенты", "Калоиды", "Фурри", "Паравозы", "Старики", "Родители",
+            "Люди", "Инопланетяне", "Монголы", "Игроки TouHou", "Котики", "Мемы с котиками", "Зомби",
+            "Нелегальные мигранты", "Игроки ТФ2", "Ноутбуки", "Мегакорпораты", "Стулья", "Трамп", "Путин", "Твиттерские",
+            "Динозавры", "Пираты", "ИИшки", "Кракен", "Ктулху", "Император", "Космодесантники", "Скуфы", "Геймеры",
+            "Кактусы", "Космонавты", "Вампиры-веганы", "Паравозик Томас", "Танцующие скелеты", "Идоты", "Бомжи", "Психи",
+            "Бабушки, которые не скидывают мошенникам миллионы", "Мошенники", "Чиновники", "Хищный цветок", "Штирлиц",
+            "Мультимиллиардеры", "Владельцы Nokia 3310", "Nokia 3310", "Плесень", "Император Римской империи", "Роботы пылесосы",
+            "Квантовые частицы", "Бактерии в общественном туалете", "Сотрудники секретной лаборатории", "Профессиональные опаздуны",
+            "Голуби нефтяные магнаты", "Население луны", "Цивилизация микроволновок", "Существа из 4-го измерения", "Скелеты",
+            "Люди, которые коллекционируют камни", "Крутые скелеты", "Члены тайного общества ложек", "Холодильники культысты", "Хлеб",
+            "Пользователь Internet Explorer", "Налоговые инспекторы", "Джедаи", "Ситхи", "Тараканы", "Китайцы", "Сам сайт"
+        ];
+
+        const words2 = [
+            "Пицца", "Мемы", "Лунтик", "Смешарики", "Андертейл", "Музыка", "Унитазы", "Фурри", "Мессенджер Макс",
+            "Иван Иванов", "Российские сериалы", "Мыло", "Мел", "Шахты", "360 Total Seqrity", "Фуфелшмерц", "Мемы с котиками",
+            "Гастер", "Таблетки", "Конопля (индустриальная)", "Мемы физматов", "Квантовая физика", "Тик Ток", "Школьники",
+            "Трамп", "Путин", "Твиттерские", "Германия 40-ых", "Продам гараж", "Заводы", "Нелегальные мигранты", "ААААААА",
+            "Продажа воздуха", "Пельмени", "Культ картошки", "Путеводитель по чёрным дырам", "Шаурма", "Квантовая механика для чайников",
+            "Похороны старого компьютера", "Бетон", "Топ 10 луж", "Крутые скелеты", "Сайт знакомств для цветков", "История ложки",
+            "Суд над тараканами", "Профессиональное ниченонеделание", "Биография камня", "Как приручить микроволновку",
+            "Служба поддержки скелетов", "Новости из паралельных вселенных", "Энциклопедия бесполезных фактов", "Кирпич",
+            "Соц сеть для некромантов", "Каталог подозрительных грибов", "Госдума марсиан", "Сайт поклонников числа 47", "Продажа времени",
+            "Каталог всех луж", "Сайт организации Огузок", "История войны табуреток", "650 тысяч слтульев", "Руководство по сну"
+        ];
+
+        const words3 = [
+            "СДВГ симулятор", "Язык Гастера", "Язык квантовой механики", "Математика", "Всё на арабском", "Мемный передоз",
+            "Коммунизм", "ИИ мусор повсюду", "Котики вместо иконок", "Санс", "Нет", "Текстуры вместо цветов", "Чёрно белый",
+            "Детский труд", "Вырвиглазные цвета", "Крысы", "Сломанный дизайн", "Всё из градиентов", "Абстракционизм", "Капсом",
+            "Сайт из 2009", "Стиль Window 98", "Только Comic Sans", "Стиль Гос портала", "Без картинок", "Без текста",
+            "Стили отдельно для каждого элемента", "Только абсолютное позиционирование", "Всё работает на вере в себя", "Сайт без JS",
+            "Только canvas", "Только SVG", "Всё на WebGL", "Только iframe", "Всё на ассемблере", "Всё на Brainfuck",
+            "Всё на Python в браузере", "Всё на PHP", "Всё анимированно", "Анимиции только через @keyframes", "Симулятор EXel",
+            "Всё на Excel", "Но это Power Point", "Но это школьная презинтация", "Делать без помощи гугла или ИИ", "Звук на каждый клик",
+            "Максимально перегруженный интерфейс", "Огромные кнопки", "Абсурдно минималистично", "Но это сны при температуре 39",
+            "Но это сайт из 90-ых", "Только перменные", "Цвета меняются на случайные каждые 5 секунд", "Но это газета",
+            "Всё вращается", "Только div", "Только p", "Но без css", "Всё в одном файле", "Одна страница", "Отдельные страницы вместо div и других разделителей"
+        ];
+
+        const drum1 = document.getElementById("drum-1");
+        const drum2 = document.getElementById("drum-2");
+        const drum3 = document.getElementById("drum-3");
+        const btn = document.getElementById("kazik");
+        const garland = document.getElementById("garland");
+        const bulbs = document.querySelectorAll('.bulb');
+
+        btn.addEventListener('click', () => {
+            drum1.classList.add('is-spinning');
+            drum2.classList.add('is-spinning');
+            drum3.classList.add('is-spinning');
+
+            const audio = document.getElementById('sound');
+            audio.play();
+
+            let steps = 0;
+
+            const interval = setInterval(() => {
+                drum1.textContent = words1[Math.floor(Math.random() * words1.length)];
+                drum2.textContent = words2[Math.floor(Math.random() * words2.length)];
+                drum3.textContent = words3[Math.floor(Math.random() * words3.length)];
+
+                steps++;
+
+                if (steps >= 15) {
+                    clearInterval(interval);
+
+                    drum1.classList.remove('is-spinning');
+                    drum2.classList.remove('is-spinning');
+                    drum3.classList.remove('is-spinning');
+
+                    clearInterval(bulbInterval);
+                    garland.classList.add('celebrate');
+                    setTimeout(() => {
+                        garland.classList.remove('celebrate');
+                        bulbInterval = setInterval(switchBulb, delay);
+                    }, 1800);
+                }
+            }, 50);
+        });
+
+        let i = 0;
+        const delay = 100;
+
+        function switchBulb() {
+            bulbs.forEach(b => b.classList.remove('active'));
+
+            bulbs[i].classList.add('active');
+            i++;
+
+            if (i >= bulbs.length) {
+                i = 0;
+            }
+        }
+
+        let bulbInterval = setInterval(switchBulb, delay);
+        switchBulb();
+    </script>
+</body>
+</html>
