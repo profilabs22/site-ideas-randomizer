@@ -10,8 +10,8 @@
     --button-led: #ffb300;
     --spot: rgba(255, 255, 0, 0.10);
 
-    --wood: url("/wood.jpg");
-    --background: url("/background.jpg");
+    --wood: url("wood.jpg");
+    --background: url("background.jpg");
 
     --table-height: 25vh;
     --table-top-fade: 35%;
